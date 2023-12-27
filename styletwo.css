@@ -1,23 +1,30 @@
 
 body{
-    background: linear-gradient(to top, #4A00E0, #8E2DE2); 
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); 
+    background-position: center center; 
     animation-name: ColorChanging;
-    animation-duration: 7000ms;
+    animation-duration: 8000ms;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
+    animation-delay: 800ms;
+    width: 100vw;
+    height: 100vh;
 }
 
 @keyframes ColorChanging {
-   0%{
-    background: linear-gradient(to top, #4A00E0, #8E2DE2); 
-   }
-   50%{
-    background: linear-gradient(to right #4A00E0, #8E2DE2); 
-   }
-   75%{
-    background: linear-gradient(to bottom, #4A00E0, #8E2DE2); 
-   }
-   100%{
-    background: linear-gradient(to left, #4A00E0, #8E2DE2); 
-   }
-}
+    0%{
+     background: linear-gradient(to right, #4A00E0, #8E2DE2); 
+    }
+    25%{
+        background: linear-gradient(to top, #8e2de2, #4a00e0);
+    }
+    50%{
+     background: linear-gradient(to left, #4A00E0, #8E2DE2);
+    }
+    75%{
+        background: linear-gradient(to bottom, #8e2de2, #4a00e0); 
+    }
+    100%{
+     background: linear-gradient(to right, #4A00E0, #8E2DE2); 
+    }
+ }
