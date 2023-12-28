@@ -1,19 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Year 2024</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styletwo.css">
+
+    <style>
+        body {
+            background: linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9);
+            background-size: 200%;
+            background-position: left;
+            animation: Backgroundchange 7000ms linear infinite alternate;
+        }
+
+        @keyframes Backgroundchange {
+            0% {
+                background-position: right;
+            }
+
+            100% {
+                background-position: left;
+            }
+        }
+    </style>
+
 </head>
+
 <body>
 
-    <div class="classtwo bg-red-500">
-        ss
+    <div class="classtwo text-white font-bold text-center">
+        Working good
     </div>
 
-    <script src="/js.js"></script>
-    
+    <script>
+        window.onload = function () {
+            setTimeout(() => {
+                document.body.style.background = "linear-gradient(to right, #a80077, #66ff00)";
+                document.body.style.animation = "Backgroundchange 7000ms linear infinite alternate";
+                document.body.style.backgroundSize = '200%'
+                document.body.style.backgroundPosition = 'left'
+                console.log('Working1')
+            }, 14000);
+            setTimeout(() => {
+                document.body.style.background = "linear-gradient(to right, #1d4350, #a43931)";
+                document.body.style.animation = "Backgroundchange 7000ms linear infinite alternate";
+                document.body.style.backgroundSize = '200%'
+                document.body.style.backgroundPosition = 'left'
+                console.log('Working2')
+            },28000);
+            setTimeout(() => {
+                document.body.style.background = "linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9)";
+                document.body.style.animation = "Backgroundchange 7000ms linear infinite alternate";
+                document.body.style.backgroundSize = '200%'
+                document.body.style.backgroundPosition = 'left'
+                console.log('Working2')
+            }, 42000);
+        };
+    </script>
+
 </body>
+
 </html>
