@@ -59,6 +59,7 @@
             white-space: nowrap;
             margin: 0 auto;
             letter-spacing: .15em;
+            word-wrap: break-word;
         }
 
         .typewriter .line-1 {
@@ -110,15 +111,15 @@
 
 <body>
 
-    <div class="InfoBox bg-white w-[60rem]  py-10 px-10 rounded-lg my-6 flex m-auto">
+    <div class="InfoBox bg-white w-[60rem] h-max py-10 px-10 rounded-lg my-6 flex m-auto break-words word-break: break-all;">
 
-        <div class="typewriter">
+        <div class="typewriter inline-block">
             <h1>
-                <span class="line-1">This is the first line of text.</span>
+                <span class="line-1 inline-block">This is the first line of text.</span>
                 <br>
-                <span class="line-2">This is the second line of text.</span>
+                <span class="line-2 inline-block ">Lorem, ipsum <br> dolor sit amet consectetur  adipisicing elit. <br>laceat, nuue velit temporibus neque repel Temporibus, id eaque.</span>
                 <br>
-                <span class="line-3">This is the third line of text.</span>
+                <span class="line-3 inline-block">This is the third line of text.</span>
             </h1>
         </div>
 
@@ -169,14 +170,14 @@
     line2.textContent = '';
     line3.textContent = '';
   
-    let i = 0;
-    let j = 0;
-    let k = 0;
+    let L1 = 0;
+    let L2 = 0;
+    let L3 = 0;
   
     function typeLine1() {
-      if (i < line1Text.length) {
-        line1.textContent += line1Text.charAt(i);
-        i++;
+      if (L1 < line1Text.length) {
+        line1.textContent += line1Text.charAt(L1);
+        L1++;
         setTimeout(typeLine1, 50);
       } else {
         setTimeout(typeLine2, 1000);
@@ -184,9 +185,9 @@
     }
   
     function typeLine2() {
-      if (j < line2Text.length) {
-        line2.textContent += line2Text.charAt(j);
-        j++;
+      if (L2 < line2Text.length) {
+        line2.textContent += line2Text.charAt(L2);
+        L2++;
         setTimeout(typeLine2, 50);
       } else {
         setTimeout(typeLine3, 1000);
@@ -194,9 +195,9 @@
     }
   
     function typeLine3() {
-      if (k < line3Text.length) {
-        line3.textContent += line3Text.charAt(k);
-        k++;
+      if (L3 < line3Text.length) {
+        line3.textContent += line3Text.charAt(L3);
+        L3++;
         setTimeout(typeLine3, 50);
       }
     }
