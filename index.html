@@ -24,14 +24,6 @@
             font-family: 'Comic Neue', cursive;
         }
 
-        .Textshinging {
-            background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: ShiningText 10000ms linear infinite;
-            background-size: 200%;
-        }
-
         /* Keyframe for Bachgroundchanging */
         @keyframes Bachgroundchanging {
             0% {
@@ -41,6 +33,14 @@
             100% {
                 background-position: left;
             }
+        }
+
+        .Textshinging {
+            background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: ShiningText 10000ms linear infinite;
+            background-size: 200%;
         }
 
         /* Keyframe for shining the text */
@@ -58,36 +58,16 @@
             overflow: hidden;
             white-space: nowrap;
             letter-spacing: 0.15em;
-            animation: typing 3.5s steps(400, end) forwards;
+            animation: TypingEffect1 3.5s steps(400, end) forwards;
         }
 
-        .Writing-Effect-Text {
-            overflow: hidden;
-            height: 0;
-            white-space: nowrap;
-            letter-spacing: 0.15em;
-            animation: typing2 3.5s steps(400, end) forwards 4s;
-        }
-
-        @keyframes typing {
+        @keyframes TypingEffect1 {
             from {
                 width: 0;
             }
 
             to {
                 width: 100%;
-            }
-        }
-
-        @keyframes typing2 {
-            from {
-                width: 0;
-                height: 0;
-            }
-
-            to {
-                width: 100%;
-                height: 100%;
             }
         }
     </style>
@@ -104,18 +84,16 @@
             </div>
         </div>
 
-        <div class="Writing-Effect-Text">
-            <div class="Textshinging">
-                <h1 class="text-2xl my-7">I hope this new year will bring new life to you. God will give you strength
-                    <br />
-                    to overcome the obstacles this year. I hope this year you achieve your <br /> dream goals. I hope
-                    this year you upgrade your skills and knowledge. <br /> I hope this year 2024, brings good health
-                    and wealth for you. <br /> Use this <br /> year to improve your life. Do not waste this year's time.
-                    Use this year <br /> for the best good things. Once again, happy new year 2024!</h1>
-            </div>
+        <div class="Textshinging hidden text-justify transition-all duration-1000" id="Messagebox">
+            <h1 class="text-2xl my-6">I hope this new year will bring new life to you. God will give you strength to
+                overcome the obstacles this year. I hope this year you achieve your dream goals. I hope
+                this year you upgrade your skills and knowledge. I hope this year 2024, brings good health
+                and wealth for you. Use this year to improve your life. Do not waste this year's time. Use this year
+                for the best good things. Once again, happy new year 2024!
+            </h1>
         </div>
 
-        <div id="Writing-Effect-final-Text" class="hidden transition-all duration-500 justify-end">
+        <div id="creatorname" class="hidden transition-all duration-500 justify-end">
             <div class="Textshinging">
                 <h1 class="text-3xl text-left">~ SM</h1>
             </div>
@@ -124,8 +102,14 @@
     </div>
 
     <script>
+        // Showing greeting message
         setTimeout(() => {
-            let sm = document.getElementById('Writing-Effect-final-Text')
+            let MB = document.getElementById('Messagebox')
+            MB.style.display = 'flex';
+        }, 3600);
+        // Showing creator name
+        setTimeout(() => {
+            let sm = document.getElementById('creatorname')
             sm.style.display = 'flex';
         }, 7200);
         window.onload = function () {
