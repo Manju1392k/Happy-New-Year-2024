@@ -5,32 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Year 2024</title>
+
+    <!-- Style Sheet - 1 -->
     <link rel="stylesheet" href="style.css">
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
+    <!-- Style Sheet - 2 -->
     <link rel="stylesheet" href="styletwo.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <style>
         body {
             background: linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9);
             background-size: 200%;
             background-position: left;
-            animation: Backgroundchange 7000ms linear infinite alternate;
+            animation: Bachgroundchanging 7000ms linear infinite alternate;
             font-family: 'Comic Neue', cursive;
         }
 
-
-        .hpytext {
+        .Textshinging {
             background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%);
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: shine 10000ms linear infinite;
+            animation: ShiningText 10000ms linear infinite;
             background-size: 200%;
         }
 
-
-        @keyframes Backgroundchange {
+        /* Keyframe for Bachgroundchanging */
+        @keyframes Bachgroundchanging {
             0% {
                 background-position: right;
             }
@@ -40,7 +43,8 @@
             }
         }
 
-        @keyframes shine {
+        /* Keyframe for shining the text */
+        @keyframes ShiningText {
             0% {
                 background-position: 500%;
             }
@@ -49,81 +53,36 @@
                 background-position: -500%;
             }
         }
-
-        .typewriter {
-            overflow: hidden;
-            /* Ensures the content is not revealed until the animation */
-            border-right: .15em solid black;
-            /* The typewriter cursor */
-            white-space: nowrap;
-            /* Keeps the content on a single line */
-            margin: 0 auto;
-            /* Gives that scrolling effect as the typing happens */
-            letter-spacing: .15em;
-            /* Adjust as needed */
-            animation: typing 2000ms steps(40, end), blink-caret .5000ms step-end infinite;
-        }
-
-        /* The typing effect */
-        @keyframes typing {
-            from {
-                width: 0
-            }
-
-            to {
-                width: 100%
-            }
-        }
-
-        /* The typewriter cursor effect */
-        @keyframes blink-caret {
-
-            from,
-            to {
-                border-color: transparent
-            }
-
-            50% {
-                border-color: black;
-            }
-        }
     </style>
 
 </head>
 
 <body>
 
-    <div class="Text bg-white w-[60rem]  py-10 px-8 rounded-xl my-6 flex m-auto">
-        <div class="typewriter">
-            <br>
-            <h1 class="hpytext text-7xl">Happy New Year 2024</h1>
-            <div class="typewriter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem temporibus explicabo pariatur
-                voluptatum alias soluta laudantium ipsam ex iure quisquam unde nostrum provident molestiae accusamus voluptas
-                quibusdam minima ratione placeat perspiciatis excepturi hic deleniti, aliquam nobis eum? Explicabo, impedit
-                natus?</div>
-            </div>
-        </div>
+    <div class="InfoBox bg-white w-[60rem]  py-10 px-10 rounded-lg my-6 flex m-auto">
+
+
 
     </div>
-
-  
-
 
     <script>
         window.onload = function () {
             try {
+                // First background color
                 setInterval(() => {
                     document.body.style.background = "linear-gradient(to right, #a80077, #66ff00)";
                     document.body.style.animation = "Backgroundchange 7000ms linear infinite alternate";
                     document.body.style.backgroundSize = '200%'
                     document.body.style.backgroundPosition = 'left'
                 }, 14000);
+                 // Second background color 
                 setInterval(() => {
                     document.body.style.background = "linear-gradient(to right, #1d4350, #a43931)";
                     document.body.style.animation = "Backgroundchange 7000ms linear infinite alternate";
                     document.body.style.backgroundSize = '200%'
                     document.body.style.backgroundPosition = 'left'
                 }, 28000);
+                // Default background color
                 setInterval(() => {
                     document.body.style.background = "linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9)";
                     document.body.style.animation = "Backgroundchange 7000ms linear infinite alternate";

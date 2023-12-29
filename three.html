@@ -1,0 +1,55 @@
+<div class="typewriter">
+    <h1>
+      <span class="line-1">This is the first line of text.</span>
+      <span class="line-2">This is the second line of text.</span>
+    </h1>
+  </div>
+  
+  <style>
+    .typewriter h1 {
+      overflow: hidden;
+      border-right: .15em solid orange;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: .15em;
+    }
+  
+    .typewriter .line-1 {
+      animation: typing-1 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    }
+  
+    .typewriter .line-2 {
+      animation: typing-2 3.5s steps(40, end), blink-caret .75s step-end infinite;
+      animation-delay: 3.5s;
+    }
+  
+    @keyframes typing-1 {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+  
+    @keyframes typing-2 {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+  
+    @keyframes blink-caret {
+      from, to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: orange;
+      }
+    }
+  </style>
+  
+ 
+  
