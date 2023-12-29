@@ -53,6 +53,57 @@
                 background-position: -500%;
             }
         }
+
+        .typewriter h1 {
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+        }
+
+        .typewriter .line-1 {
+            animation: typing-1 3.5s steps(40, end)
+        }
+
+        .typewriter .line-2 {
+            animation: typing-2 3.5s steps(40, end);
+            animation-delay: 3.5s;
+        }
+
+        .typewriter .line-3 {
+            animation: typing-3 3.5s steps(40, end);
+            animation-delay: 7s;
+        }
+
+        @keyframes typing-1 {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes typing-2 {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes typing-3 {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
     </style>
 
 </head>
@@ -61,7 +112,15 @@
 
     <div class="InfoBox bg-white w-[60rem]  py-10 px-10 rounded-lg my-6 flex m-auto">
 
-
+        <div class="typewriter">
+            <h1>
+                <span class="line-1">This is the first line of text.</span>
+                <br>
+                <span class="line-2">This is the second line of text.</span>
+                <br>
+                <span class="line-3">This is the third line of text.</span>
+            </h1>
+        </div>
 
     </div>
 
@@ -75,7 +134,7 @@
                     document.body.style.backgroundSize = '200%'
                     document.body.style.backgroundPosition = 'left'
                 }, 14000);
-                 // Second background color 
+                // Second background color 
                 setInterval(() => {
                     document.body.style.background = "linear-gradient(to right, #1d4350, #a43931)";
                     document.body.style.animation = "Backgroundchange 7000ms linear infinite alternate";
@@ -96,6 +155,54 @@
 
         };
     </script>
+
+<script>
+    const line1 = document.querySelector('.line-1');
+    const line2 = document.querySelector('.line-2');
+    const line3 = document.querySelector('.line-3');
+  
+    const line1Text = line1.textContent;
+    const line2Text = line2.textContent;
+    const line3Text = line3.textContent;
+  
+    line1.textContent = '';
+    line2.textContent = '';
+    line3.textContent = '';
+  
+    let i = 0;
+    let j = 0;
+    let k = 0;
+  
+    function typeLine1() {
+      if (i < line1Text.length) {
+        line1.textContent += line1Text.charAt(i);
+        i++;
+        setTimeout(typeLine1, 50);
+      } else {
+        setTimeout(typeLine2, 1000);
+      }
+    }
+  
+    function typeLine2() {
+      if (j < line2Text.length) {
+        line2.textContent += line2Text.charAt(j);
+        j++;
+        setTimeout(typeLine2, 50);
+      } else {
+        setTimeout(typeLine3, 1000);
+      }
+    }
+  
+    function typeLine3() {
+      if (k < line3Text.length) {
+        line3.textContent += line3Text.charAt(k);
+        k++;
+        setTimeout(typeLine3, 50);
+      }
+    }
+  
+    typeLine1();
+  </script>
 
 </body>
 
