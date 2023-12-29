@@ -1,0 +1,20 @@
+
+<style>
+    .typing-effect {
+  overflow: hidden;  /* Hides extra text until animated */
+  white-space: nowrap;  /* Prevents text wrapping */
+  letter-spacing: 0.15em;  /* Adds spacing between letters */
+  animation: typing 3.5s steps(40, end) forwards;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+</style>
+
+<div class="typing-effect">This text will appear as if it's being typed.
+    <br>
+    hello
+</div>
