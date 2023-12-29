@@ -7,6 +7,8 @@
     <title>New Year 2024</title>
     <link rel="stylesheet" href="style.css">
 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
     <style>
         body {
             background: linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9);
@@ -14,6 +16,17 @@
             background-position: left;
             animation: Backgroundchange 7000ms linear infinite alternate;
         }
+
+
+        .hpytext {
+            background: linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 8000ms linear infinite;
+            background-size: 200%;
+        }
+
 
         @keyframes Backgroundchange {
             0% {
@@ -24,14 +37,24 @@
                 background-position: left;
             }
         }
+
+        @keyframes shine {
+            0% {
+                background-position: 500%;
+            }
+
+            100% {
+                background-position: -500%;
+            }
+        }
     </style>
 
 </head>
 
 <body>
 
-    <div class="classtwo text-white font-bold text-center">
-        Working good
+    <div class="Text bg-white w-max py-10 px-8 rounded-xl my-6 flex m-auto">
+        <h1 class="hpytext text-7xl">Happy New Year 2024</h1>
     </div>
 
     <script>
